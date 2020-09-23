@@ -1,0 +1,67 @@
+Started by user Dmitry Falin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/MyJob
+The recommended git tool is: NONE
+using credential 2b6bff90-d7ac-4d04-a3da-9c8c027c80bf
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/diman4ic14/simple_servlet.git # timeout=10
+Fetching upstream changes from https://github.com/diman4ic14/simple_servlet.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_ASKPASS to set credentials GitHub
+ > git fetch --tags --progress -- https://github.com/diman4ic14/simple_servlet.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision aed4a50bc2a448f7c6249f877d37ca2f18abfbd7 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f aed4a50bc2a448f7c6249f877d37ca2f18abfbd7 # timeout=10
+Commit message: "edited url-pattern of servlet-mapping"
+ > git rev-list --no-walk aed4a50bc2a448f7c6249f877d37ca2f18abfbd7 # timeout=10
+[MyJob] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin/mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< ru.falin:servlet >--------------------------
+[INFO] Building servlet 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ servlet ---
+[INFO] Deleting /var/lib/jenkins/workspace/MyJob/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ servlet ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/MyJob/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ servlet ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /var/lib/jenkins/workspace/MyJob/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ servlet ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/MyJob/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ servlet ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ servlet ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-war-plugin:3.3.0:war (default-war) @ servlet ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [servlet] in [/var/lib/jenkins/workspace/MyJob/target/servlet-1.0-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/var/lib/jenkins/workspace/MyJob/src/main/webapp]
+[INFO] Building war: /var/lib/jenkins/workspace/MyJob/target/servlet-1.0-SNAPSHOT.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.992 s
+[INFO] Finished at: 2020-09-27T12:37:32Z
+[INFO] ------------------------------------------------------------------------
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying /var/lib/jenkins/workspace/MyJob/target/servlet-1.0-SNAPSHOT.war to container Tomcat 9.x Remote with context servlet
+  [/var/lib/jenkins/workspace/MyJob/target/servlet-1.0-SNAPSHOT.war] is not deployed. Doing a fresh deployment.
+  Deploying [/var/lib/jenkins/workspace/MyJob/target/servlet-1.0-SNAPSHOT.war]
+Finished: SUCCESS
+
+
